@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>捐款支持 - Peer2Peer Foundation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <!-- 顶部导航 -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold text-blue-700">Peer2Peer Foundation</h1>
+      <nav>
+        <ul class="flex space-x-6 text-gray-700">
+          <li><a href="/">主页</a></li>
+          <li><a href="/about">关于我们</a></li>
+          <li><a href="/donate" class="font-semibold text-blue-600">捐款支持</a></li>
+          <li><a href="/contact">联系我们</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 横幅 -->
+  <section class="bg-blue-600 text-white text-center py-16">
+    <h2 class="text-3xl font-bold mb-4">一起创造改变</h2>
+    <p class="mb-6">您的捐款将直接帮助更多学生与社区项目。</p>
+    <a href="#donate-form" class="bg-yellow-400 px-6 py-3 rounded-lg font-bold">立即捐款</a>
+  </section>
+
+  <!-- 捐款表单 -->
+  <section id="donate-form" class="max-w-3xl mx-auto bg-white shadow-lg rounded-xl p-8 mt-10">
+    <h3 class="text-2xl font-semibold text-center mb-6">捐款支持</h3>
+    
+    <!-- 金额选择 -->
+    <div class="flex justify-center space-x-4 mb-6">
+      <button class="bg-gray-200 px-4 py-2 rounded-lg">HK$100</button>
+      <button class="bg-gray-200 px-4 py-2 rounded-lg">HK$200</button>
+      <button class="bg-gray-200 px-4 py-2 rounded-lg">HK$500</button>
+      <input type="number" placeholder="自定义金额" class="border rounded px-3 py-2 w-32">
+    </div>
+
+    <!-- 捐款类型 -->
+    <div class="text-center mb-6">
+      <label class="mr-4"><input type="radio" name="type" checked> 一次性</label>
+      <label><input type="radio" name="type"> 每月定期</label>
+    </div>
+
+    <!-- 基本信息 -->
+    <form action="/process-donation" method="POST">
+      <input type="text" placeholder="姓名" class="w-full border rounded px-3 py-2 mb-4">
+      <input type="email" placeholder="邮箱" class="w-full border rounded px-3 py-2 mb-4">
+      <input type="tel" placeholder="联系电话" class="w-full border rounded px-3 py-2 mb-4">
+
+      <!-- 支付方式 -->
+      <div class="mb-6">
+        <label class="block mb-2">支付方式：</label>
+        <select class="w-full border rounded px-3 py-2">
+          <option>Visa / Mastercard</option>
+          <option>PayPal</option>
+          <option>Stripe</option>
+          <option>AlipayHK</option>
+          <option>WeChat Pay HK</option>
+        </select>
+      </div>
+
+      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold">
+        确认捐款
+      </button>
+    </form>
+
+    <p class="text-sm text-gray-500 mt-4 text-center">
+      本网站采用 SSL 加密，您的支付信息将得到严格保护。
+    </p>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-gray-100 mt-12 py-6 text-center text-gray-600">
+    <p>Peer2Peer Foundation | 香港注册慈善机构</p>
+    <p>© 2025 Peer2Peer Foundation. 保留所有权利。</p>
+  </footer>
+</body>
+</html>
